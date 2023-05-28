@@ -112,3 +112,5 @@ sudo docker-compose -f docker-compose-proxy-amd64.yaml up -d
 ```bash
 sudo docker-compose -f docker-compose-proxy-amd64.yaml down
 ```
+
+# Установка SSL сертификата
