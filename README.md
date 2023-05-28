@@ -3,7 +3,7 @@
 Оф страница с инструкцией по установке docker
 [Docker Doks](https://docs.docker.com/engine/install/ubuntu/)
 
-# Установка Docker на ubuntu 20.04,20.10
+# Установим Docker на ubuntu 20.04,20.10
 ```bash
 sudo apt-get install apt-transport-https ca-certificates curl \
     gnupg lsb-release
@@ -19,7 +19,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose
 
 sudo usermod -aG docker $USER
 ```
-# Установка Docker Compose
+# Установим Docker Compose
 На сегодняшний день самая свежая версия 2.15.1. Проверить наличие новой версии можно тут [Docker Compose GitHub](https://github.com/docker/compose/releases)
 ```bash
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.15.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -27,7 +27,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 
-## Перед запуском сервера отредактируйте переменные в compose файле под себя
+## Перед запуском сервера отредактируйте если требутеся переменные в compose файле под себя
 ```bash
 POSTGRES_USER=zabbix
 POSTGRES_PASSWORD=zabbix
@@ -113,4 +113,6 @@ sudo docker-compose -f docker-compose-proxy-amd64.yaml up -d
 sudo docker-compose -f docker-compose-proxy-amd64.yaml down
 ```
 
-# Установка SSL сертификата
+# Установка SSL сертификата к web итерфейсу
+### Мануал как создать бесплатный сертификат я писал [тут](https://github.com/neon0ff/SSL_certificate#readme), а сейчас расмотрим как настроить SSL на нашем домене.
+
